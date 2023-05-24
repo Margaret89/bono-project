@@ -47,14 +47,14 @@
 </template>
 
 <script>
-import PostForm from "@/components/PostForm.vue"
+import PostFormTest from "@/components/PostFormTest.vue"
 import PostList from "@/components/PostList.vue"
 import axios from "axios"
 import MyInput from './components/UI/MyInput.vue'
 
 export default {
 	components: {
-		PostForm, PostList,
+		PostFormTest, PostList,
 MyInput
 	},
 	data() {
