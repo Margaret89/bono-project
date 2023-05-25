@@ -1,24 +1,36 @@
 <template>
-	<div class="choose-acc open">
-		<div class="choose-acc__top">
-			<div class="choose-acc__img" :style="{'background-image': `url(${require('../assets/img/google_plus.svg')})`}"></div>
+	<div class="choose-acc" :class="{ open: this.openPopup }">
+		<div class="choose-acc__top" @click="this.openPopup=!this.openPopup">
+			<div class="choose-acc__img" :style="{'background-image': 'url(' + require('../assets/img/'+options[activeItem].img) + ')'}"></div>
 
-			<div class="choose-acc__text">Google</div>
+			<div class="choose-acc__text">{{ options[activeItem].title }}</div>
 			<div class="choose-acc__arr">
 				<svg class="icon ic-arrow-down" width="11" height="6">
 					<use xlink:href="../assets/sprites/sprite.svg#ic-arrow-down"></use>
 				</svg>
 			</div>
 		</div>
+
 		<div class="choose-acc-popup">
 			<div class="choose-acc-popup__search">
-				<input type="text" placeholder="Search">
+				<input
+					type="text"
+					placeholder="Search"
+					v-model="searchQuery"
+				>
+
 				<svg class="icon ic-search" width="15" height="15">
 					<use xlink:href="../assets/sprites/sprite.svg#ic-search"></use>
 				</svg>
 			</div>
 
-			<div class="choose-acc-popup__item active" v-for="item in list">
+			<div
+				class="choose-acc-popup__item"
+				v-for="(item, index) in SearcheOptions"
+				:key="index"
+				@click="changeOption(item.id)"
+				:class="{ active: item.id == activeItem}"
+			>
 				<div class="choose-acc-popup__content">
 					<div class="choose-acc-popup__img" :style="{'background-image': `url(${require('../assets/img/'+item.img)})`}"></div>
 
@@ -42,12 +54,25 @@
 export default {
 	data() {
 		return{
-			list: [
-				{img:'google_plus.svg', title:'Google', mail:'googleplus@gmail.com', status:'active'},
-				{img:'zara.png', title:'Zara', mail:'info@zara.com'},
-				{img:'google_plus.svg', title:'Google', mail:'googleplus@gmail.com'},
-				{img:'google_plus.svg', title:'Google', mail:'googleplus@gmail.com'},
+			options: [
+				{id:'0', img:'google_plus.svg', title:'Google', mail:'googleplus@gmail.com', status:true},
+				{id:'1', img:'zara.png', title:'Zara', mail:'info@zara.com'},
+				{id:'2', img:'google_plus.svg', title:'Google 2', mail:'googleplus@gmail.com'},
+				{id:'3', img:'google_plus.svg', title:'Google 3', mail:'googleplus@gmail.com'},
 			],
+			openPopup: false,
+			activeItem: 0,
+			searchQuery: '',
+		}
+	},
+	methods: {
+		changeOption(id) {
+			this.activeItem = id;
+		}
+	},
+	computed: {
+		SearcheOptions() {//Поиск
+			return this.options.filter(item => item.title.toLowerCase().includes(this.searchQuery.toLowerCase()))
 		}
 	},
 }
@@ -64,6 +89,7 @@ export default {
 			display: inline-flex;
 			align-items: center;
 			gap: 18px;
+			cursor: pointer;
 		}
 
 		&__img{
@@ -87,11 +113,13 @@ export default {
 			.icon{fill: rgba(0,0,0,0.2);}
 		}
 
-		&.open .choose-acc-popup{display: inline-block;}
+		&.open .choose-acc-popup{
+			transform: scaleY(1);
+			opacity: 1;
+		}
 	}
 
 	.choose-acc-popup{
-		display: none;
 		width: 380px;
 		border-radius: 22px;
 		border: 1px solid #F5F5F9;
@@ -102,6 +130,11 @@ export default {
 		position: absolute;
 		top: 100%;
 		left: 0;
+		transform: scaleY(0);
+		transform-origin: 0 0;
+		opacity: 0;
+		transition: all 0.2s ease 0s;
+		overflow: hidden;
 
 		&__search{
 			padding: 15px 20px;
