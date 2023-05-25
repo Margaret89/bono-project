@@ -1,7 +1,7 @@
 <template>
-	<span class="btn">
+	<button class="btn">
 		<slot></slot>
-	</span>
+	</button>
 </template>
 
 <script>
@@ -31,6 +31,9 @@ export default {
 		padding: 0 25px;
 		cursor: pointer;
 		transition: all 0.2s ease 0s;
+		box-shadow: none;
+		margin: 0;
+		outline: none;
 
 		.icon{
 			fill: #fff;
