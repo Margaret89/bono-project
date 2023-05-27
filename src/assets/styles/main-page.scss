@@ -1,0 +1,288 @@
+/*-------------- main-page -----------------*/
+.main-page{
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+	min-height: 100%;
+
+	&__img{
+		flex-shrink: 0;
+		max-width: 50%;
+	}
+
+	&__content{
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		width: 100%;
+	}
+
+	&__logo{flex-shrink: 0;}
+
+	&__auth{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+}
+
+.auth{
+	width: 100%;
+	max-width: 380px;
+
+	&__title{
+		@include font(none, 500, 2.6rem, 1.4, $color-text);
+	}
+
+	&__text{
+		@include font(none, 200, 1.2rem, 1.2, #000);
+		margin-top: 10px;
+	}
+
+	&__content{margin-top: 45px;}
+
+	&__or{
+		@include font(none, none, 1.3rem, none, #8A919F);
+		text-align: center;
+		margin: 33px 0;
+		position: relative;
+
+		span{
+			padding: 0 5px;
+			background: #fff;
+			position: relative;
+		}
+	}
+
+	&__or::before{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1px;
+		background: #f5f5f9;
+		position: absolute;
+		top: 50%;
+		left: 0;
+	}
+
+	&__item{margin-bottom: 28px;}
+
+	&__label{
+		@include font(none, 500, 1.3rem, none, #000);
+		margin-bottom: 10px;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	input[type="date"],
+	input[type="password"],
+	textarea{
+		display: inline-flex;
+		align-items: center;
+		height: 4.4rem;
+		width: 100%;
+		font-family: $font-site;
+		@include font(none, 500, 1.3rem, 1, $color-text);
+		padding: 0 20px;
+		border: 1px solid #E8E9EC;
+		border-radius: 2.2rem;
+		outline: 0;
+		margin: 0;
+		background: transparent;
+		box-shadow: none;
+		transition: border 0.2s ease 0s;
+	}
+
+	textarea{
+		height: 16.6rem;
+		line-height: 1.6;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+
+	input[type="text"]:focus,
+	input[type="number"]:focus,
+	input[type="date"]:focus,
+	input[type="email"]:focus,
+	input[type="password"]:focus,
+	textarea:focus{
+		border-color: #000;
+	}
+
+	input[type="text"]::placeholder,
+	input[type="number"]::placeholder,
+	input[type="date"]::placeholder,
+	input[type="email"]::placeholder,
+	input[type="password"]::placeholder,
+	textarea::placeholder{
+		color: #8A919F;
+		opacity: 1;
+	}
+
+	&__polit{margin-top: 38px;}
+	&__links{margin-top: 26px;}
+
+	&__links-acc{color: $color-grey;}
+
+	&__links-acc:hover,
+	&__links-sign:hover{
+		color: #000;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	&__btn{
+		margin-top: 36px;
+		.btn{width: 100%;}
+	}
+}
+
+.btn-google{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	height: 4.4rem;
+	border: 1px solid #F5F5F9;
+	border-radius: 2.2rem;
+	@include font(none, 500, 1.3rem, 1.2, #000);
+	cursor: pointer;
+	transition: border 0.2s ease 0s;
+
+	&:hover{border-color: #000;}
+}
+
+.auth-error{
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: 15px;
+	@include font(none, none, 1.3rem, none, $color-red);
+
+	&__icon{
+		flex-shrink: 0;
+
+		.icon{
+			display: block;
+			fill: $color-red;
+		}
+	}
+}
+
+.popup-code{
+	width: 560px;
+	min-height: 440px;
+	max-width: calc(100vw - 30px);
+	border-radius: 45px;
+	background: #fff;
+	padding: 62px 15px;
+	text-align: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+
+	&__title{
+		@include font(none, 500, 2.6rem, 1.4, #000);
+	}
+
+	&__text{
+		max-width: 250px;
+		@include font(none, 200, 1.2rem, 1.6, #000);
+		margin: 14px auto 0;
+	}
+
+	.code-verif{margin-top: 43px;}
+	.timer{margin-top: 42px;}
+
+	&__bottom{
+		margin-top: 27px;
+		@include font(none, none, 1.3rem, 1.6, #000);
+	}
+
+	&__note{
+		@include font(none, 200, 1.2rem, 1.6, #969696);
+	}
+
+	&__link:hover{
+		cursor: pointer;
+		text-decoration: underline;
+	}
+
+	&__btn{
+		margin-top: 57px;
+		
+		.btn{
+			width: 220px;
+			max-width: 100%;
+		}
+	}
+
+	&__icon{margin-bottom: 44px;}
+
+	&__success{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 316px;
+	}
+}
+
+.code-verif{
+	display: flex;
+	justify-content: center;
+	gap: 14px;
+
+	input[type="text"]{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 43px;
+		height: 55px;
+		border-radius: 12px;
+		border: 2px solid rgba(138,145,159,0.2);
+		padding: 5px;
+		transition: border 0.2s ease 0s;
+		@include font(none, 500, 2rem, 1, #000);
+		text-align: center;
+	}
+
+	input[type="text"]:focus,
+	input[type="text"].active{
+		border-color: #000;
+	}
+}
+
+.timer{
+	display: inline-block;
+	vertical-align: top;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #8A919F;
+	padding: 4px;
+	background: conic-gradient(#000 20%, rgba(138,145,159,.2) 0);
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		background: #fff;
+		@include font(none, 500, 1.2rem, 1, #000);
+	}
+}
+
+@media (min-height: 600px) {
+	.main-page{
+		&__img{
+			img{max-height: calc(100vh - 40px);}
+		}
+	}
+}

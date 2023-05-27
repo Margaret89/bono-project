@@ -39,4 +39,5 @@ export default {
 	@import './assets/styles/modal.scss';
 	@import './assets/styles/profile-info.scss';
 	@import './assets/styles/form-site.scss';
+	@import './assets/styles/main-page.scss';
 </style>

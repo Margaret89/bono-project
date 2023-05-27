@@ -3,6 +3,7 @@ import Main from '../pages/Main.vue'
 import Typography from '../pages/Typography.vue'
 import Campains from '../pages/Campains.vue'
 import CreateCampaign from '../pages/CreateCampaign.vue'
+import Auth from '../pages/Auth.vue'
 
 const routes = [
   {
@@ -20,6 +21,10 @@ const routes = [
   {
     path: '/create-campain',
     component: CreateCampaign
+  },
+  {
+    path: '/auth',
+    component: Auth
   },
   // {
   //   path: '/about',
