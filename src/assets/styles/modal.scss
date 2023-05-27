@@ -1,0 +1,28 @@
+/*-------------- modal -----------------*/
+.modal{
+	width: 480px;
+	height: 100vh;
+	background: #fff;
+	padding: 32px 34px;
+	position: fixed;
+	top: 0;
+	right: -500px;
+	z-index: 1000;
+	transition: right 0.2s ease 0s;
+	overflow-y: auto;
+
+	&.open{right: 0;}
+
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		gap: 30px;
+		margin-bottom: 30px;
+	}
+
+	&__actions{
+		display: flex;
+		align-items: center;
+		gap: 14px;
+	}
+}

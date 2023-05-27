@@ -699,8 +699,8 @@ export default {
 		MyCheckbox,
 		MySwitch
 	},
- data() {
-	return{
+ 	data() {
+		return{
 			valCheck: false,
 			valSwitch: false,
 		}

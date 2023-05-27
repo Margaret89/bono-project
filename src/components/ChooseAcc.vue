@@ -171,7 +171,7 @@ export default {
 			justify-content: space-between;
 			gap: 15px;
 			padding: 15px 20px;
-			transition: background 0.2s ease 0s;
+			transition: background-color 0.2s ease 0s;
 			cursor: pointer;
 
 			&:hover{background: #FBFBFC;}

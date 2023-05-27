@@ -100,7 +100,7 @@ export default {
 		&__item{
 			padding: 12px 20px 13px;
 			@include font(none, none, 1.3rem, none, $color-text);
-			transition: background 0.2s ease 0s;
+			transition: background-color 0.2s ease 0s;
 			cursor: pointer;
 
 			&:hover{background: #FBFBFC;}
@@ -116,7 +116,7 @@ export default {
 			padding: 16px 20px;
 			background: rgba(255,77,90,0.03);
 			@include font(none, 500, 1.3rem, none, $color-red);
-			transition: background 0.2s ease 0s;
+			transition: background-color 0.2s ease 0s;
 			cursor: pointer;
 
 			.icon{fill: $color-red;}

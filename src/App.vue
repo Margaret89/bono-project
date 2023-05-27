@@ -35,4 +35,7 @@ export default {
 	@import './assets/styles/tabs-page.scss';
 	@import './assets/styles/tag.scss';
 	@import './assets/styles/page.scss';
+	@import './assets/styles/table-site.scss';
+	@import './assets/styles/modal.scss';
+	@import './assets/styles/profile-info.scss';
 </style>

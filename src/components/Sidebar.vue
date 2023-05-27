@@ -71,7 +71,7 @@ export default {
 			border-radius: 50%;
 			background: #EBEFF2;
 			margin-top: auto;
-			transition: background 0.2s ease 0s, transform 0.3s ease 0s;
+			transition: background-color 0.2s ease 0s, transform 0.3s ease 0s;
 			cursor: pointer;
 
 			.icon{transition: stroke 0.2s ease 0s;}

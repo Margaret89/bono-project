@@ -1,0 +1,256 @@
+/*-------------- table site -----------------*/
+.table-site-wrap{
+	border: 1px solid #EFEFF4;
+	border-radius: 20px;
+	overflow: hidden;
+
+	.pager{
+		padding: 14px 20px;
+		background: #FBFBFC;
+		border-top: 1px solid #EFEFF4;
+	}
+
+	&_white{
+		.table-site th,
+		.pager{
+			background: transparent;
+		}
+	}
+}
+
+.table-site{
+	width: 100%;
+
+	tr:not(:last-child){border-bottom: 1px solid #EFEFF4;}
+	
+	th,
+	td{
+		padding: 10px 15px;
+		vertical-align: middle
+	}
+	
+	th{
+		height: 4.5rem;
+		@include font(none, 600, 1.2rem, 1.6, #8A919F);
+		background: #FBFBFC;
+		vertical-align: middle;
+		border-bottom: 1px solid #EFEFF4;
+	}
+
+	td{
+		height: 5rem;
+		transition: background-color 0.2s ease 0s;
+	}
+
+	td:first-child,
+	th:first-child{
+		padding-left: 20px;
+	}
+
+	td:last-child,
+	th:last-child{
+		padding-right: 20px;
+	}
+
+	&__head-content{
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		&_center{justify-content: center;}
+	}
+
+	&__head-content > .icon{flex-shrink: 0;}
+
+	&__head_check{width: 50px;}
+	&__head_id{width: 60px;}
+
+	&__del{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background: rgba(215,221,224,0.3);
+		cursor: pointer;
+		position: relative;
+		transition: background-color 0.2s ease 0s;
+
+		.icon{fill: #75769A}
+
+		.tooltip{
+			display: none;
+			margin-top: 5px;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 2;
+		}
+
+		&:hover{background: rgba(215,221,224,1);}
+		&:hover .tooltip{display: inline-flex;}
+	}
+
+	tr:hover td{background: #FBFBFC;}
+}
+
+.table-site-sort{
+	display: inline-block;
+	vertical-align: middle;
+	flex-shrink: 0;
+	width: 7px;
+	height: 10px;
+	position: relative;
+
+	&__up{
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 3.5px 4px 3.5px;
+		border-color: transparent transparent #dadde0 transparent;
+	}
+
+	&__down{
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 4px 3.5px 0 3.5px;
+		border-color: #dadde0 transparent transparent transparent;
+	}
+
+	&__up,
+	&__down{
+		position: absolute;
+		left: 0;
+		transition: border 0.2s ease 0s;
+	}
+
+	&__up{top: 0;}
+	&__down{bottom: 0;}
+
+	&__up.active{border-color: transparent transparent #8A919F transparent;}
+	&__down.active{border-color: #8A919F transparent transparent transparent;}
+}
+
+
+.table-name{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	&__img{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		width: 28px;
+		height: 28px;
+		border-radius: 50%;
+		background-color: #DA4E41;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		@include font(none, bold, 1.1rem, 1, #fff);
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__count{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background: #FFF6F5;
+		@include font(none, 600, 1.1rem, 1, $color-red);
+		text-align: center;
+		position: relative;
+
+		.tooltip{
+			display: none;
+			white-space: nowrap;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-top: 4px;
+			z-index: 2;
+		}
+
+		&:hover .tooltip{display: inline-flex;}
+	}
+}
+
+.table-date{
+	display: flex;
+	align-items: center;
+	gap: 15px;
+
+	&__icon{
+		flex-shrink: 0;
+		position: relative;
+
+		.tooltip{
+			display: none;
+			white-space: nowrap;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-top: 4px;
+			z-index: 2;
+
+			.icon{max-width: none;}
+		}
+
+		&:hover .tooltip{display: inline-flex;}
+	}
+}
+
+.popup-check{
+	display: inline-block;
+	border: 10px;
+	background: #fff;
+	border: 1px solid #F5F5F9;
+	border-radius: 10px;
+	padding: 15px;
+
+	&__item:not(:last-child){margin-bottom: 12px;}
+	&.open{display: inline-block;}
+}
+
+.file{
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+
+	&__icon{
+		flex-shrink: 0;
+
+		.icon{
+			display: block;
+			fill: $color-blue;
+		}
+	}
+
+	&__text{
+		@include font(none, 500, 1.3rem, none, $color-blue);
+	}
+}
+
+.table-site-count{
+	display: inline-flex;
+	align-items: center;
+	height: 2.2rem;
+	border-radius: 1.1rem;
+	border: 1px solid #E8E9EC;
+	padding: 0 10px;
+	margin: 0 5px;
+
+	&_dark{border-color: #000;}
+}
