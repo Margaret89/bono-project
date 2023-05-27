@@ -159,8 +159,8 @@ export default {
 		}
 	}
 
-	.btn[disabled="disabled"],
-	.btn[disabled="disabled"]:hover{
+	.btn[disabled],
+	.btn[disabled]:hover{
 		background: #E4E4EA;
 		color: #fff;
 		cursor: auto;

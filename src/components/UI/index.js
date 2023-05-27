@@ -3,6 +3,7 @@ import MyButtonCircle from "@/components/UI/MyButtonCircle"
 import MyCheckbox from "@/components/UI/MyCheckbox"
 import MySwitch from "@/components/UI/MySwitch"
 import MyPager from "@/components/UI/MyPager"
+import ChooseInput from "@/components/UI/ChooseInput"
 
 export default [
 	MyButton,
@@ -10,4 +11,5 @@ export default [
 	MyCheckbox,
 	MySwitch,
 	MyPager,
+	ChooseInput,
 ]
