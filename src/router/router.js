@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Main from '../pages/Main.vue'
 import Typography from '../pages/Typography.vue'
+import Campains from '../pages/Campains.vue'
 
 const routes = [
   {
@@ -10,6 +11,10 @@ const routes = [
   {
     path: '/typography',
     component: Typography
+  },
+  {
+    path: '/campains',
+    component: Campains
   },
   // {
   //   path: '/about',

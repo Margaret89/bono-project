@@ -34,4 +34,5 @@ export default {
 	@import './assets/styles/icons.scss';
 	@import './assets/styles/tabs-page.scss';
 	@import './assets/styles/tag.scss';
+	@import './assets/styles/page.scss';
 </style>

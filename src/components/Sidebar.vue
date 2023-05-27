@@ -1,9 +1,9 @@
 <template>
 	<aside class="sidebar" :class="{ active: this.status }">
-		<div class="sidebar-logo">
+		<router-link to="/" class="sidebar-logo">
 			<div class="sidebar-logo__short"><img src="../assets/img/logo.svg" alt=""></div>
 			<div class="sidebar-logo__full"><img src="../assets/img/logo-full.svg" alt=""></div>
-		</div>
+		</router-link>
 
 		<div class="sidebar__content">
 			<div class="sidebar-menu">
