@@ -94,9 +94,8 @@
 	<br><br><br>
 	
 	<div class="h2">Checkbox</div>
-	<my-checkbox text="Text" :checked="true"/>
+	<my-checkbox v-model="valCheck">Text</my-checkbox>
 	<br><br><br>
-
 
 	<div class="h2">Табуляция</div>
 	<div class="tabs-page">
@@ -113,6 +112,21 @@
 			<div class="tabs-page__content-item" id="tab4">Text 4</div>
 		</div>
 	</div><br><br><br>
+	<div class="tabs-page tabs-page_line">
+		<ul class="tabs-page__list">
+			<li class="tabs-page__item active" data-item="tab1">Tab1</li>
+			<li class="tabs-page__item" data-item="tab2">Tab2</li>
+			<li class="tabs-page__item" data-item="tab3">Tab3</li>
+			<li class="tabs-page__item" data-item="tab4">Tab4</li>
+		</ul>
+		<div class="tabs-page__content">
+			<div class="tabs-page__content-item active" id="tab1">Text 1</div>
+			<div class="tabs-page__content-item" id="tab2">Text 2</div>
+			<div class="tabs-page__content-item" id="tab3">Text 3</div>
+			<div class="tabs-page__content-item" id="tab4">Text 4</div>
+		</div>
+	</div><br><br><br>
+
 	<div class="h2">Теги</div>
 	<div class="tag">Text</div><br><br>
 	<div class="tag tag_red">Text</div><br><br>
@@ -120,14 +134,14 @@
 	<div class="tag tag_yellow">Text</div><br><br>
 	<div class="tag tag_black">Text</div><br><br>
 	<div class="tag tag tag_small">Text</div><br><br>
+	<br><br>
+	
+
 	<div class="h2">Switch</div>
-	<div class="switch">
-		<input type="checkbox" id="switch1">
-		<label class="switch__content" for="switch1">
-			<div class="switch__marker"></div>
-		</label>
-		<div class="switch__text">Text</div>
-	</div><br><br>
+	<my-switch idswitch="switch1" v-model="valSwitch">Text</my-switch>
+	<br><br>
+	<br><br>
+
 	<div class="h2">Иконки</div>
 	<div class="type-icon">
 		<div class="type-icon__item">
@@ -679,9 +693,18 @@
 
 <script>
 import MyCheckbox from '@/components/UI/MyCheckbox.vue'
+import MySwitch from '@/components/UI/MySwitch.vue'
 export default {
-  components: { MyCheckbox },
-
+	components: {
+		MyCheckbox,
+		MySwitch
+	},
+ data() {
+	return{
+			valCheck: false,
+			valSwitch: false,
+		}
+	},
 }
 </script>
 

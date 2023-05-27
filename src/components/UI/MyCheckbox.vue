@@ -1,12 +1,12 @@
 <template>
 	<label class="input-check">
-		<input type="checkbox" :checked="checked">
+		<input type="checkbox" :value="modelValue" @change="updateCheck">
 		<span class="input-check__mark">
 			<svg class="icon ic-tick" width="8" height="6">
 				<use xlink:href="../../assets/sprites/sprite.svg#ic-tick"></use>
 			</svg>
 		</span>
-		<span class="input-check__text">{{ text }}  {{ modelValue }}</span>
+		<span class="input-check__text"><slot></slot></span>
 	</label>
 </template>
 
@@ -14,14 +14,17 @@
 export default {
 	name: 'my-checkbox',
 	props: {
-		modelValue: String,
-		text: String,
-		checked: Boolean,
+		modelValue: Boolean,
 	},
+	methods:{
+		updateCheck(event) {
+			this.$emit('update:modelValue', event.target.checked)
+		}
+	}
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 	@import '../../assets/styles/mixins.scss';
 	@import '../../assets/styles/vars.scss';
 

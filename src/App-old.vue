@@ -50,7 +50,7 @@
 import PostFormTest from "@/components/PostFormTest.vue"
 import PostList from "@/components/PostList.vue"
 import axios from "axios"
-import MyInput from './components/UI/MyInput.vue'
+import MyInput from './components/UI/_MyInput.vue'
 
 export default {
 	components: {

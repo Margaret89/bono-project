@@ -1,0 +1,70 @@
+/*-------------- tag -----------------*/
+.tag{
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	height: 2.4rem;
+	padding: 0 16px;
+	border-radius: 1.2rem;
+	border: 1px solid $color-green;
+	@include font(none, 500, 1.3rem, 1, $color-green);
+	position: relative;
+
+	.icon{fill: $color-green;}
+
+	&_red{
+		border-color: $color-red;
+		color: $color-red;
+
+		.icon{fill: $color-red;}
+	}
+
+	&_purple{
+		border-color: $color-purple;
+		color: $color-purple;
+
+		.icon{fill: $color-purple;}
+	}
+
+	&_yellow{
+		border-color: $color-yellow;
+		color: $color-yellow;
+
+		.icon{fill: $color-yellow;}
+	}
+
+	&_black{
+		border-color: #000;
+		color: #000;
+
+		.icon{fill: #000;}
+	}
+
+	&_small{
+		height: 1.8rem;
+		border-radius: 0.9rem;
+		padding: 0 5px;
+	}
+
+	.popup-check{
+		display: none;
+		width: 110px;
+		margin-left: 6px;
+		color: #000;
+		position: absolute;
+		top: 0;
+		left: 100%;
+		z-index: 10;
+
+		&.open{display: inline-block;}
+		.input-check__mark .icon{fill: #fff;}
+	}
+}
+
+.tag-wrap{
+	display: flex;
+	align-items: center;
+	gap: 16px;
+
+	.icon{flex-shrink: 0;}
+}
