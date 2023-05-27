@@ -1,6 +1,7 @@
 <template>
-	<div class="filter-date open ">
-		<div class="filter-date-btn">
+  <!-- <v-date-picker v-model="date" /> -->
+	<div class="filter-date" :class="{ open: this.openPopup }">
+		<div class="filter-date-btn"  @click="this.openPopup=!this.openPopup">
 			<span class="filter-date-btn__content">
 				<svg class="icon ic-calendar" width="16" height="18">
 					<use xlink:href="../assets/sprites/sprite.svg#ic-calendar"></use>
@@ -94,10 +95,23 @@
 </template>
 
 <script>
-export default {
+// import { Calendar, DatePicker } from 'v-calendar';
 
+export default {
+//   components: {
+//     Calendar,
+//     DatePicker,
+//   },
+	data() {
+		return {
+		//   date: new Date(),
+			openPopup: false,
+		};
+	},
+	
 }
 </script>
+
 
 <style lang="scss">
 	@import '../assets/styles/mixins.scss';
@@ -122,11 +136,11 @@ export default {
 			.filter-date-btn{
 				background: #F5F5F9;
 				&:hover{background: #3b3b3b;}
-				&:hover &__content{color: #fff;}
-				&:hover &__arr{opacity: 1;}
+				&:hover .filter-date-btn__content{color: #fff;}
+				&:hover .filter-date-btn__arr{opacity: 1;}
 
-				&:hover &__content .icon,
-				&:hover &__arr .icon{
+				&:hover .filter-date-btn__content .icon,
+				&:hover .filter-date-btn__arr .icon{
 					fill: #fff;
 				}
 			}
