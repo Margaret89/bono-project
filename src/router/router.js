@@ -5,6 +5,7 @@ import Campains from '../pages/Campains.vue'
 import CreateCampaign from '../pages/CreateCampaign.vue'
 import Auth from '../pages/Auth.vue'
 import Leads from '../pages/Leads.vue'
+import Profile from '../pages/Profile.vue'
 
 const routes = [
   {
@@ -30,6 +31,10 @@ const routes = [
   {
     path: '/leads',
     component: Leads
+  },
+  {
+    path: '/profile',
+    component: Profile
   },
   // {
   //   path: '/about',

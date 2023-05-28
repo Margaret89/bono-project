@@ -16,7 +16,8 @@
 
 
 		<div class="header-auth__popup">
-			<div class="header-auth__item">Edit profile</div>
+			<router-link to="/profile" class="header-auth__item">Edit profile</router-link>
+
 			<div class="header-auth__item">My shifts</div>
 			<div class="header-auth__item">Settings</div>
 			<div class="header-auth__exit">

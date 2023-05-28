@@ -49,4 +49,6 @@ export default {
 	@import './assets/styles/player.scss';
 	@import './assets/styles/history-modal.scss';
 	@import './assets/styles/cards.scss';
+	@import './assets/styles/profile-card.scss';
+	@import './assets/styles/notice.scss';
 </style>
