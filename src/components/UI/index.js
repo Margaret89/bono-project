@@ -4,6 +4,8 @@ import MyCheckbox from "@/components/UI/MyCheckbox"
 import MySwitch from "@/components/UI/MySwitch"
 import MyPager from "@/components/UI/MyPager"
 import ChooseInput from "@/components/UI/ChooseInput"
+import MySelect from "@/components/UI/MySelect"
+import MyFormSearch from "@/components/UI/MyFormSearch"
 
 export default [
 	MyButton,
@@ -12,4 +14,6 @@ export default [
 	MySwitch,
 	MyPager,
 	ChooseInput,
+	MySelect,
+	MyFormSearch,
 ]

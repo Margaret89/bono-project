@@ -4,6 +4,7 @@ import Typography from '../pages/Typography.vue'
 import Campains from '../pages/Campains.vue'
 import CreateCampaign from '../pages/CreateCampaign.vue'
 import Auth from '../pages/Auth.vue'
+import Leads from '../pages/Leads.vue'
 
 const routes = [
   {
@@ -26,6 +27,10 @@ const routes = [
     path: '/auth',
     component: Auth
   },
+  {
+    path: '/leads',
+    component: Leads
+  },
   // {
   //   path: '/about',
   //   name: 'about',
@@ -38,7 +43,8 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+  linkActiveClass: "active"
 })
 
 export default router

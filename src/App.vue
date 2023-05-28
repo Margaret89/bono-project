@@ -40,4 +40,13 @@ export default {
 	@import './assets/styles/profile-info.scss';
 	@import './assets/styles/form-site.scss';
 	@import './assets/styles/main-page.scss';
+	@import './assets/styles/view.scss';
+	@import './assets/styles/select-check.scss';
+	@import './assets/styles/filter.scss';
+	@import './assets/styles/tooltip.scss';
+	@import './assets/styles/rating.scss';
+	@import './assets/styles/popup-actions.scss';
+	@import './assets/styles/player.scss';
+	@import './assets/styles/history-modal.scss';
+	@import './assets/styles/cards.scss';
 </style>

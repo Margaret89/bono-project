@@ -1,0 +1,68 @@
+/*-------------- select-check -----------------*/
+.select-check{
+	position: relative;
+
+	&__field{
+		display: inline-flex;
+		align-items: center;
+		gap: 15px;
+		height: 4.4rem;
+		border-radius: 2.2rem;
+		border: 1px solid #F5F5F9;
+		padding: 0 20px;
+		cursor: pointer;
+		transition: background 0.2s ease 0s;
+
+		&:hover{background: #F5F5F9;}
+	}
+
+	&__arr{
+		flex-shrink: 0;
+		transition: transform 0.2s ease 0s;
+
+		.icon{fill: rgba(0,0,0,0.2);}
+	}
+
+	&__info{
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		@include font(none, none, 1.3rem, none, #000);
+
+		.icon{
+			fill: #000;
+			flex-shrink: 0;
+		}
+	}
+
+	&__popup{
+		display: none;
+		width: 180px;
+		padding: 10px 15px;
+		max-height: 230px;
+		border: 1px solid #F5F5F9;
+		border-radius: 15px;
+		background: #fff;
+		position: absolute;
+		top: calc(100% + 3px);
+		left: 0;
+		overflow-y: auto;
+		z-index: 10;
+	}
+
+	&__item:not(:last-child){margin-bottom: 18px;}
+
+	&__item{
+		.input-check__text{color: #8A919F;}
+		input[type=checkbox]:checked ~ .input-check__text{color: #000;}
+	}
+
+	&_right &__popup{
+		left: auto;
+		right: 0;
+	}
+
+	&.open &__field{background: #F5F5F9;}
+	&.open &__arr{transform: rotate(180deg);}
+	&.open &__popup{display: inline-block;}
+}

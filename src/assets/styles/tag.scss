@@ -45,6 +45,15 @@
 		border-radius: 0.9rem;
 		padding: 0 5px;
 	}
+}
+
+.tag-wrap{
+	display: inline-flex;
+	align-items: center;
+	gap: 16px;
+	position: relative;
+
+	.icon{flex-shrink: 0;}
 
 	.popup-check{
 		display: none;
@@ -59,12 +68,4 @@
 		&.open{display: inline-block;}
 		.input-check__mark .icon{fill: #fff;}
 	}
-}
-
-.tag-wrap{
-	display: flex;
-	align-items: center;
-	gap: 16px;
-
-	.icon{flex-shrink: 0;}
 }

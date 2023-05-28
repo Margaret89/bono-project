@@ -7,14 +7,20 @@
 
 		<div class="sidebar__content">
 			<div class="sidebar-menu">
-				<div class="sidebar-menu__item" v-for="item in menu">
+				<router-link 
+					class="sidebar-menu__item"
+					v-for="(item, index) in menu"
+					:key="index"
+					:class="{active: item.link == linkActiveClass}"
+					:to="`${item.link}`"
+				>
 					<div class="sidebar-menu__icon">
 						<svg :class="'icon '+item.icon" :width="item.icon_width" :height="item.icon_height">
 							<use :xlink:href="require(`../assets/sprites/sprite.svg`)+'#'+item.icon"></use>
 						</svg>
 					</div>
 					<div class="sidebar-menu__text">{{ item.text }}</div>
-				</div>
+				</router-link>
 			</div>
 
 			<div class="sidebar__arr" @click="this.status=!this.status">
@@ -31,11 +37,11 @@ export default {
 	data() {
 		return{
 			menu: [
-				{icon:'ic-home', icon_width:'20', icon_height:'20', text:'Overview'},
-				{icon:'ic-star', icon_width:'20', icon_height:'20', text:'Campains'},
-				{icon:'ic-person', icon_width:'16', icon_height:'22', text:'Leads'},
-				{icon:'ic-phone', icon_width:'20', icon_height:'20', text:'Calls'},
-				{icon:'ic-people', icon_width:'20', icon_height:'20', text:'Users'},
+				{icon:'ic-home', icon_width:'20', icon_height:'20', text:'Overview', link:'/'},
+				{icon:'ic-star', icon_width:'20', icon_height:'20', text:'Campains', link:'/campains'},
+				{icon:'ic-person', icon_width:'16', icon_height:'22', text:'Leads', link:'/Leads'},
+				{icon:'ic-phone', icon_width:'20', icon_height:'20', text:'Calls', link:'/'},
+				{icon:'ic-people', icon_width:'20', icon_height:'20', text:'Users', link:'/'},
 			],
 			status: false,
 		}
@@ -109,6 +115,7 @@ export default {
 			align-items: center;
 			gap: 15px;
 			opacity: 0.35;
+			color: #000;
 			cursor: pointer;
 			transition: opacity 0.2s ease 0s;
 

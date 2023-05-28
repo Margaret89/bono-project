@@ -1,0 +1,28 @@
+/*-------------- view -----------------*/
+.view{
+	display: inline-flex;
+	align-items: center;
+	gap: 3px;
+	height: 4.4rem;
+	border-radius: 2.2rem;
+	padding: 2px;
+	border: 1px solid #F5F5F9;
+
+	&__item{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		transition: background 0.2s ease 0s;
+		cursor: pointer;
+
+		.icon{fill: #000;}
+
+		&.active,
+		&:hover{
+			background: #F5F5F9;
+		}
+	}
+}

@@ -1,0 +1,83 @@
+/*-------------- filter -----------------*/
+.filter{
+	position: relative;
+
+	&__btn{
+		display: inline-flex;
+		align-items: center;
+		gap: 15px;
+		height: 4.4rem;
+		border-radius: 2.2rem;
+		border: 1px solid #F5F5F9;
+		padding: 5px 20px;
+		cursor: pointer;
+		transition: background 0.2s ease 0s;
+
+		.icon{
+			fill: #000;
+			flex-shrink: 0;
+		}
+
+		&:hover{background: #F5F5F9;}
+	}
+
+	&__arr{
+		transition: transform 0.2s ease 0s;
+
+		.icon{fill: rgba(0,0,0,0.2);}
+	}
+
+	&__popup{
+		display: none;
+		width: 414px;
+		border: 1px solid #F5F5F9;
+		border-radius: 15px;
+		background: #fff;
+		position: absolute;
+		top: calc(100% + 5px);
+		left: 0;
+		z-index: 10;
+	}
+
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+		gap: 33px 40px;
+		max-height: 300px;
+		padding: 15px 24px;
+		overflow-y: auto;
+	}
+
+	&__sect{width: calc(50% - 20px);}
+
+	&__title{
+		@include font(none, 600, 1.3rem, none, #000);
+		margin-bottom: 8px;
+	}
+
+	&__item:not(:last-child){margin-bottom: 8px;}
+
+	&__item{
+		.input-check__text{color: #8A919F;}
+		input[type=checkbox]:checked ~ .input-check__text{color: #000;}
+	}
+
+	&__bottom{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 30px;
+		padding: 15px;
+		border-top: 1px solid #F5F5F9;
+	}
+	
+
+	&.open &__btn{background: #F5F5F9;}
+	&.open &__arr{transform: rotate(180deg);}
+	&.open &__popup{display: inline-block;}
+
+	&_right &__popup{
+		left: auto;
+		right: 0;
+	}
+}
