@@ -19,7 +19,9 @@
 			<router-link to="/profile" class="header-auth__item">Edit profile</router-link>
 
 			<div class="header-auth__item">My shifts</div>
-			<div class="header-auth__item">Settings</div>
+
+			<router-link to="/setting-bussiness" class="header-auth__item">Settings</router-link>
+
 			<div class="header-auth__exit">
 				<svg class="icon ic-logout" width="16" height="16">
 					<use xlink:href="../assets/sprites/sprite.svg#ic-logout"></use>

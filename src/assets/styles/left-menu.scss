@@ -9,7 +9,7 @@
 	list-style: none;
 	overflow-y: auto;
 
-	&__item{
+	&__link{
 		display: flex;
 		align-items: center;
 		gap: 15px;
@@ -36,16 +36,16 @@
 		transition: color 0.2s ease 0s;
 	}
 
-	&__item.active,
-	&__item:hover{
+	&__link.active,
+	&__link:hover{
 		background: #F9F9FB;
 
 		&__text{color: #000;}
 		.icon{fill: #000;}
 	}
 
-	&__item.active &__text,
-	&__item:hover &__text{
+	&__link.active &__text,
+	&__link:hover &__text{
 		color: #000;
 	}
 }

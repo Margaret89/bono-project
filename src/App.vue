@@ -58,4 +58,5 @@ export default {
 	@import './assets/styles/file-upload.scss';
 	@import './assets/styles/left-menu.scss';
 	@import './assets/styles/settings.scss';
+	@import './assets/styles/info-int.scss';
 </style>

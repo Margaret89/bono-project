@@ -1,6 +1,14 @@
 <template>
 	<div class="select" :class="{ open: this.openPopup }">
-		<div class="select__main" @click="this.openPopup=!this.openPopup">
+		<div class="select__main" @click="this.openPopup=!this.openPopup" v-if="value">
+			{{ value }}
+			<div class="select__arr">
+				<svg class="icon ic-arrow-down" width="11" height="6">
+					<use xlink:href="../../assets/sprites/sprite.svg#ic-arrow-down"></use>
+				</svg>
+			</div>
+		</div>
+		<div class="select__main" @click="this.openPopup=!this.openPopup" v-if="value">
 			{{ value }}
 			<div class="select__arr">
 				<svg class="icon ic-arrow-down" width="11" height="6">

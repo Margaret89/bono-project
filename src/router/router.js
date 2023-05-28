@@ -7,6 +7,11 @@ import Auth from '../pages/Auth.vue'
 import Leads from '../pages/Leads.vue'
 import Profile from '../pages/Profile.vue'
 import Users from '../pages/Users.vue'
+import SettingBussiness from '../pages/SettingBussiness.vue'
+import SettingBuilding from '../pages/SettingBuilding.vue'
+import SettingIntegrations from '../pages/SettingIntegrations.vue'
+import SettingLeads from '../pages/SettingLeads.vue'
+import SettingNotice from '../pages/SettingNotice.vue'
 
 const routes = [
   {
@@ -40,6 +45,26 @@ const routes = [
   {
     path: '/users',
     component: Users
+  },
+  {
+    path: '/setting-bussiness',
+    component: SettingBussiness
+  },
+  {
+    path: '/setting-building',
+    component: SettingBuilding
+  },
+  {
+    path: '/setting-integrations',
+    component: SettingIntegrations
+  },
+  {
+    path: '/setting-leads',
+    component: SettingLeads
+  },
+  {
+    path: '/setting-notice',
+    component: SettingNotice
   },
   // {
   //   path: '/about',
