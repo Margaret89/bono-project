@@ -1,0 +1,57 @@
+/*-------------- credit-history -----------------*/
+.credit-history{
+	&__sect:not(:last-child){margin-bottom: 20px;}
+
+	&__sect{
+		border-radius: 15px;
+		padding: 13px 30px;
+		background: #FBFBFC;
+
+		.table-site-wrap{margin-top: 20px;}
+	}
+
+	&__sect_green{background: rgba(15,173,104,0.06);}
+
+	&__top{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 30px;
+		margin-bottom: 6px;
+
+		.btn-circle{flex-shrink: 0;}
+	}
+
+	&__title{
+		@include font(none, 500, 1.6rem, none, #000);
+	}
+
+	&__item{
+		display: flex;
+		gap: 10px;
+		padding: 15px 0;
+		@include font(none, none, 1.4rem, none, #000);
+	}
+
+	&__item:not(:last-child){border-bottom: 1px solid #EFEFF4;}
+
+	&__label{
+		width: 150px;
+		color: #707070;
+	}
+}
+
+.credit-history-info{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	&__icon{
+		flex-shrink: 0;
+		.icon{fill: $color-green;}
+	}
+
+	&__text{
+		@include font(none, 500, 1.6rem, none, $color-green);
+	}
+}

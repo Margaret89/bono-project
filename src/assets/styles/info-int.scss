@@ -1,0 +1,63 @@
+/*-------------- info-int -----------------*/
+.info-int{
+	&__sect:not(:last-child){margin-bottom: 20px;}
+
+	&__sect{
+		border-radius: 15px;
+		background: #FBFBFC;
+		padding: 13px 30px;
+	}
+
+	&__title{
+		@include font(none, 500, 1.6rem, none, #000);
+		margin-bottom: 20px;
+	}
+
+	&__row{padding: 15px 0;}
+	&__row:not(:last-child){border-bottom: 1px solid #EFEFF4;}
+
+	&__item{
+		display: flex;
+		justify-content: space-between;
+		gap: 15px;
+	}
+
+	&__item:not(:last-child){margin-bottom: 6px;}
+
+	&__label{
+		@include font(none, none, 1.4rem, none, #75769A);
+	}
+
+	&__val{
+		display: inline-flex;
+		gap: 15px;
+	}
+
+	&__edit{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		background: #EAEAEF;
+		transition: background 0.2s ease 0s;
+		cursor: pointer;
+
+		.icon{
+			fill: #000;
+			transition: fill 0.2s ease 0s;
+		}
+
+		&:hover{
+			background: #3b3b3b;
+			.icon{fill: #fff;}
+		}
+	}
+
+	&__subtitle{
+		@include font(none, 500, 1.4rem, none, $color-blue);
+		margin-bottom: 10px;
+	}
+}

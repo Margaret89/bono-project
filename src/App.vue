@@ -51,4 +51,11 @@ export default {
 	@import './assets/styles/cards.scss';
 	@import './assets/styles/profile-card.scss';
 	@import './assets/styles/notice.scss';
+	@import './assets/styles/modal-main.scss';
+	@import './assets/styles/add-block.scss';
+	@import './assets/styles/color-edit.scss';
+	@import './assets/styles/credit-history.scss';
+	@import './assets/styles/file-upload.scss';
+	@import './assets/styles/left-menu.scss';
+	@import './assets/styles/settings.scss';
 </style>

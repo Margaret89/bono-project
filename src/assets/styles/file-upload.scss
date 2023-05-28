@@ -1,0 +1,57 @@
+/*-------------- file-upload -----------------*/
+.file-upload{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 14px;
+
+	input[type="file"]{display: none;}
+
+	&__content{
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		padding: 0;
+		margin: 0;
+	}
+
+	&__icon{
+		flex-shrink: 0;
+	}
+
+	&__text{
+		@include font(none, 500, 1.3rem, none, #000);
+	}
+
+	&__content:hover &__icon .icon{fill: $color-grey;}
+	&__content:hover &__text{color: $color-grey;}
+}
+
+.file-upload-item{
+	display: inline-flex;
+	align-items: center;
+	height: 3.4rem;
+	border-radius: 1.7rem;
+	background: #F5F5F9;
+	@include font(none, 500, 1.2rem, 1, #8A919F);
+	padding: 0 18px;
+
+	&__icon,
+	&__del{
+		flex-shrink: 0;
+	}
+
+	&__icon{margin-right: 10px;}
+	&__icon .icon{fill: #8A919F;}
+
+	&__del{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		border: 1px solid #000;
+		margin-left: 20px;
+	}
+}

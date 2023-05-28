@@ -1,0 +1,116 @@
+/*-------------- add-block -----------------*/
+.add-block{
+	&__field{
+		position: relative;
+		margin-bottom: 18px;
+
+		input[type="text"]{
+			display: inline-flex;
+			align-items: center;
+			height: 4.4rem;
+			width: 100%;
+			font-family: $font-site;
+			@include font(none, 500, 1.3rem, 1, $color-text);
+			padding: 0 45px 0 20px;
+			border: 1px solid #E8E9EC;
+			border-radius: 2.2rem;
+			outline: 0;
+			margin: 0;
+			background: transparent;
+			box-shadow: none;
+			transition: border 0.2s ease 0s;
+		}
+
+		input[type="text"]:focus{border-color: #000;}
+
+		input[type="text"]::placeholder{
+			color: #8A919F;
+			opacity: 1;
+		}
+	}
+
+	&__plus{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 28px;
+		height: 28px;
+		border-radius: 50%;
+		background: #F5F5F9;
+		transition: background 0.2s ease 0s;
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		transform: translateY(-50%);
+		cursor: pointer;
+
+		.icon{
+			fill: #000;
+			transition: fill 0.2s ease 0s;
+		}
+
+		&:hover{
+			background: #000;
+			.icon{fill: #fff;}
+		}
+	}
+
+	&__list{
+		max-height: 345px;
+		border-radius: 22px;
+		border: 1px solid #F5F5F9;
+		overflow-y: auto;
+		box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.05);
+	}
+
+	&__btn{
+		margin-top: 25px;
+
+		.btn{width: 100%;}
+	}
+}
+
+.add-block-item{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 16px 20px;
+
+	&:not(:last-child){border-bottom: 1px solid #F5F5F9;}
+
+	&__img{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+		width: 100%;
+
+		.ic-send-mail{fill: $color-yellow;}
+	}
+
+	&__content > .btn,
+	&__content > .icon{
+		flex-shrink: 0;
+	}
+
+	&__name{
+		@include font(none, 600, 1.4rem, 1.4, #000);
+	}
+
+	&__mail{
+		@include font(none, none, 1.3rem, 1.4, #8A919F);
+	}
+}

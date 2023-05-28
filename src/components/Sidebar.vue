@@ -41,7 +41,7 @@ export default {
 				{icon:'ic-star', icon_width:'20', icon_height:'20', text:'Campains', link:'/campains'},
 				{icon:'ic-person', icon_width:'16', icon_height:'22', text:'Leads', link:'/Leads'},
 				{icon:'ic-phone', icon_width:'20', icon_height:'20', text:'Calls', link:'/'},
-				{icon:'ic-people', icon_width:'20', icon_height:'20', text:'Users', link:'/'},
+				{icon:'ic-people', icon_width:'20', icon_height:'20', text:'Users', link:'/users'},
 			],
 			status: false,
 		}
